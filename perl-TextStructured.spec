@@ -3,12 +3,12 @@ Summary:	TextStructured perl module
 Summary(pl):	Modu³ perla TextStructured
 Name:		perl-TextStructured
 Version:	0.02
-Release:	7
+Release:	8
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Text/TextStructured-%{version}.tar.gz
 Patch0:		%{name}-paths.patch
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	perl >= 5.6
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -24,7 +24,8 @@ Modu³ perla TextStructured.
 %patch -p0
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make}
 
 %install
@@ -38,6 +39,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README template
-%{perl_sitelib}/Text/Structured.pm
-%{perl_sitelib}/Text/StructuredBase.pm
+%{perl_vendorlib}/Text/Structured.pm
+%{perl_vendorlib}/Text/StructuredBase.pm
 %{_mandir}/man3/*
