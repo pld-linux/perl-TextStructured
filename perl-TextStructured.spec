@@ -1,10 +1,15 @@
+#
+# Conditional build:
+%bcond_without	tests	# do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 Summary:	TextStructured perl module
 Summary(pl):	Modu³ perla TextStructured
 Name:		perl-TextStructured
 Version:	0.02
 Release:	8
-License:	GPL
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Text/TextStructured-%{version}.tar.gz
 # Source0-md5:	dd7937a44d09b0206f942e6dc4b57e20
@@ -29,10 +34,13 @@ Modu³ perla TextStructured.
 	INSTALLDIRS=vendor
 %{__make}
 
+%{?with_tests:%{__make} test}
+
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
