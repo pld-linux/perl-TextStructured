@@ -4,7 +4,7 @@
 #
 %include	/usr/lib/rpm/macros.perl
 Summary:	TextStructured perl module
-Summary(pl):	Modu³ perla TextStructured
+Summary(pl):	Modu³ Perla TextStructured
 Name:		perl-TextStructured
 Version:	0.02
 Release:	9
@@ -23,7 +23,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 TextStructured perl module.
 
 %description -l pl
-Modu³ perla TextStructured.
+Modu³ Perla TextStructured.
 
 %prep
 %setup -q -n TextStructured-%{version}
