@@ -7,7 +7,7 @@ Summary:	TextStructured perl module
 Summary(pl):	Modu³ perla TextStructured
 Name:		perl-TextStructured
 Version:	0.02
-Release:	8
+Release:	9
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
