@@ -27,7 +27,7 @@ Modu³ Perla TextStructured.
 
 %prep
 %setup -q -n TextStructured-%{version}
-%patch -p0
+%patch0 -p0
 
 %build
 %{__perl} Makefile.PL \
