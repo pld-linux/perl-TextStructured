@@ -4,7 +4,7 @@
 #
 %include	/usr/lib/rpm/macros.perl
 Summary:	TextStructured perl module
-Summary(pl.UTF-8):   Moduł Perla TextStructured
+Summary(pl.UTF-8):	Moduł Perla TextStructured
 Name:		perl-TextStructured
 Version:	0.02
 Release:	9
