@@ -1,7 +1,9 @@
 #
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
-#
+
+%define		pdir	Text
+%define		pnam	TextStructured
 %include	/usr/lib/rpm/macros.perl
 Summary:	TextStructured perl module
 Summary(pl.UTF-8):	Moduł Perla TextStructured
@@ -14,8 +16,9 @@ Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Text/TextStructured-%{version}.tar.gz
 # Source0-md5:	dd7937a44d09b0206f942e6dc4b57e20
 Patch0:		%{name}-paths.patch
-BuildRequires:	rpm-perlprov >= 4.1-13
+URL:		http://search.cpan.org/dist/TextStructured/
 BuildRequires:	perl-devel >= 1:5.8.0
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
