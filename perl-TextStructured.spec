@@ -29,7 +29,7 @@ Moduł Perla TextStructured.
 
 %prep
 %setup -q -n TextStructured-%{version}
-%patch0 -p0
+%patch -P0 -p0
 
 %build
 %{__perl} Makefile.PL \
